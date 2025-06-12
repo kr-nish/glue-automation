@@ -1,7 +1,3 @@
-Parameters:
-  ScriptLocation:
-    Type: String
-    Description: S3 location of the Glue script
 
 Resources:
   GlueRole:
@@ -31,7 +27,7 @@ Resources:
     Properties:
       Command:
         Name: glueetl-nishant
-        ScriptLocation: !Ref ScriptLocation
+        ScriptLocation: s3://nishant-glue-bucket-234/scripts/job-6.py
       DefaultArguments:
         "--job-language": "python"
       ExecutionProperty:
